@@ -1,4 +1,5 @@
 import React from "react";
+import { ImWhatsapp } from "react-icons/im";
 
 function App() {
   const openCatalog = () => {
@@ -6,12 +7,15 @@ function App() {
   };
 
   return (
-     <div style={{ textAlign: "center", padding: "20px" }}>
+    <div style={{ textAlign: "center", padding: "20px" }}>
       <h1>Catálogo de Productos Herbalife</h1>
 
       <button style={styles.button} onClick={openCatalog}>
         Ver
       </button>
+      <h2>Contactame</h2>
+      <h3><ImWhatsapp /> 6443859674</h3>
+
     </div>
   );
 }
