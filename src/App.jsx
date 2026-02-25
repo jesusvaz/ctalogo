@@ -7,15 +7,19 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
+    <div style={styles.container}>
       <h1>Catálogo de Productos Herbalife</h1>
 
       <button style={styles.button} onClick={openCatalog}>
         Ver
       </button>
-      <h2>Contactame</h2>
-      <h3><ImWhatsapp /> 6443859674</h3>
 
+      <h2>Contáctame</h2>
+
+      <h3 style={styles.whatsapp}>
+        <ImWhatsapp />
+        6443859674
+      </h3>
     </div>
   );
 }
@@ -27,44 +31,26 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f5f5f5",
+    textAlign: "center",
+    backgroundColor: "#2e7d32", // optional: darker background so white is visible
+    color: "white", // 👈 this changes all text to white
+    padding: "20px",
   },
   button: {
     padding: "15px 30px",
     fontSize: "18px",
     cursor: "pointer",
-    backgroundColor: "#2e7d32",
-    color: "white",
+    backgroundColor: "white",
+    color: "#2e7d32",
     border: "none",
     borderRadius: "8px",
+    margin: "20px 0",
+  },
+  whatsapp: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
 };
 
 export default App;
-
-// import React, { useState } from "react";
-
-// function App() {////
-//   const [showPDF, setShowPDF] = useState(false);
-
-//   return (
-//     <div style={{ textAlign: "center", padding: "20px" }}>
-//       <h1>Catálogo de Productos</h1>
-
-//       <button onClick={() => setShowPDF(true)}>
-//         Catalogo
-//       </button>
-
-//       {showPDF && (
-//         <iframe
-//           src="/nubia.pdf"
-//           width="100%"
-//           height="600px"
-//           title="Catalogo"
-//         />
-//       )}
-//     </div>
-//   );
-// }
-
-//export default App;
